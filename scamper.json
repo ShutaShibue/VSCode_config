@@ -3,10 +3,11 @@
 		"prefix": "labHead",
 		"body": [
 			
-			";; CSC 151 (Fall)",
-			";; Lab: $1",
-			";; Authors: $2",
-			";; Date: $3",
+			";; CSC-151-03 (Fall)",
+			";; Lab: ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}",
+			
+			";; Authors: Shuta Shibue, $2",
+			";; Date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
 			";; Acknowledgements:",
 			";;   ACKNOWLEDGEMENTS HERE"
 		]
@@ -49,6 +50,16 @@
 			"(let ([$1]",
 			"\t\t\t$2)",
 			"\t($0))"
+		]
+	},
+	"decomentation":{
+		"prefix": "doc",
+		"body": [
+			";;;($1) -> $2",
+			";;;\t$3",
+			";;;\t$4",
+			";;;\t$5",
+			";;;\t$6",			
 		]
 	},
 	"note":{
