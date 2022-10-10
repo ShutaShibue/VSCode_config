@@ -1,11 +1,21 @@
 {
+	"cons":{
+		"prefix": "cons",
+		"body": "(cons head tail)$0"
+	},
+	"testCase":{
+		"prefix": "testCase",
+		"body": [
+			"(test-case \"$1\" ${2:equal?}",
+			"$0\t$CLIPBOARD)"
+		]
+	},
 	"Lab head":{
 		"prefix": "labHead",
 		"body": [
 			
 			";; CSC-151-03 (Fall)",
-			";; Lab: ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}",
-			
+			";; Lab: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g} ($TM_FILENAME)",
 			";; Authors: Shuta Shibue, $2",
 			";; Date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
 			";; Acknowledgements:",
